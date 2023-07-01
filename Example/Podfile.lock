@@ -1,10 +1,14 @@
 PODS:
+  - AppsFlyerFramework (6.12.0):
+    - AppsFlyerFramework/Main (= 6.12.0)
+  - AppsFlyerFramework/Main (6.12.0)
   - FBSnapshotTestCase (2.1.4):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - JccLibrary (0.1.0)
+  - JccLibrary (0.1.0):
+    - AppsFlyerFramework (~> 6.12.0)
 
 DEPENDENCIES:
   - FBSnapshotTestCase
@@ -12,6 +16,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - AppsFlyerFramework
     - FBSnapshotTestCase
 
 EXTERNAL SOURCES:
@@ -19,8 +24,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
+  AppsFlyerFramework: 38431c0dd52c05f4bdbe34934ef004d586063b30
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  JccLibrary: fedca91f323ffaef218e06b09373eae4b6d8eef3
+  JccLibrary: 9dbad4104d695aefd9e31d54094e879476b40362
 
 PODFILE CHECKSUM: 1c045c8665f34cba1ad9e30eaa52f3cdda6e5420
 

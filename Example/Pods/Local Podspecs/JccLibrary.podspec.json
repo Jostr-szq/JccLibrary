@@ -16,7 +16,13 @@
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "10.0"
+    "ios": "11.0"
   },
-  "source_files": "JccLibrary/Classes/**/*"
+  "source_files": "JccLibrary/Classes/**/*",
+  "static_framework": true,
+  "dependencies": {
+    "AppsFlyerFramework": [
+      "~> 6.12.0"
+    ]
+  }
 }
