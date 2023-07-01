@@ -40,6 +40,8 @@ TODO: Add long description of the pod here.
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
   
+  s.static_framework = true
+  
   #引入库文件
     s.dependency 'AppsFlyerFramework', '~> 6.12.0'
 end
