@@ -7,7 +7,6 @@
 //
 
 #import "JJBaseViewController.h"
-#import "SVProgressHUD.h"
 #import "UIColor+JJExtension.h"
 #import <WebKit/WebKit.h>
 #import <SafariServices/SafariServices.h>

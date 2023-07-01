@@ -21,6 +21,54 @@ it, simply add the following line to your Podfile:
 pod 'JccLibrary'
 ```
 
+1. 引入JJdata.plist数据文件
+2. 添加网络和追踪权限
+3. 添加请求追踪权限代码
+
+```objective-c
+- (void)getAdvertisingTrackingAuthority {
+    
+    if (@available(iOS 14, *)) {
+            ATTrackingManagerAuthorizationStatus status = ATTrackingManager.trackingAuthorizationStatus;
+            switch (status) {
+                case ATTrackingManagerAuthorizationStatusDenied:
+                    NSLog(@"用户拒绝IDFA");
+                    break;
+                case ATTrackingManagerAuthorizationStatusAuthorized:
+                    NSLog(@"用户允许IDFA");
+                    break;
+                case ATTrackingManagerAuthorizationStatusNotDetermined: {
+                    NSLog(@"用户未做选择或未弹窗IDFA");
+                    //请求弹出用户授权框，只会在程序运行是弹框1次，除非卸载app重装，通地图、相机等权限弹框一样
+                    [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
+                        NSLog(@"app追踪IDFA权限：%lu",(unsigned long)status);
+                    }];
+                }
+                    break;
+                default:
+                    break;
+            }
+        } else {
+            // iOS14以下版本依然使用老方法
+             // 判断在设置-隐私里用户是否打开了广告跟踪
+             if ([[ASIdentifierManager sharedManager] isAdvertisingTrackingEnabled]) {
+                 NSString *idfa = [[ASIdentifierManager sharedManager].advertisingIdentifier UUIDString];
+                 NSLog(@"用户允许广告追踪 idfa:%@",idfa);
+             } else {
+                 NSLog(@"用户限制了广告追踪");
+             }
+        }
+}
+
+
+-(void)applicationDidBecomeActive:(UIApplication *)application {
+    [self getAdvertisingTrackingAuthority];
+}
+
+```
+
+
+
 ## Author
 
 824656058@qq.com, black@gmail.com

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D93417C2A4FF9480074741D /* JJData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D93417B2A4FF9480074741D /* JJData.plist */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -42,6 +43,7 @@
 		1C639FA51FD5B3CB85AF0C10 /* Pods-JccLibrary_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JccLibrary_Example.release.xcconfig"; path = "Target Support Files/Pods-JccLibrary_Example/Pods-JccLibrary_Example.release.xcconfig"; sourceTree = "<group>"; };
 		210A5463CDFD1DB1B02B0327 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		33F1CEAC1343EE64F0CE2A53 /* JccLibrary.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JccLibrary.podspec; path = ../JccLibrary.podspec; sourceTree = "<group>"; };
+		5D93417B2A4FF9480074741D /* JJData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = JJData.plist; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* JccLibrary_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JccLibrary_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -132,6 +134,7 @@
 		6003F593195388D20070C39A /* Example for JccLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				5D93417B2A4FF9480074741D /* JJData.plist */,
 				6003F59C195388D20070C39A /* CFAppDelegate.h */,
 				6003F59D195388D20070C39A /* CFAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -283,6 +286,7 @@
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				5D93417C2A4FF9480074741D /* JJData.plist in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
