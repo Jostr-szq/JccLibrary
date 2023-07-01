@@ -1,0 +1,22 @@
+{
+  "name": "JccLibrary",
+  "version": "0.1.0",
+  "summary": "A short description of JccLibrary.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/824656058@qq.com/JccLibrary",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "824656058@qq.com": "black@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/824656058@qq.com/JccLibrary.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "JccLibrary/Classes/**/*"
+}

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # JccLibrary
 
 [![CI Status](https://img.shields.io/travis/824656058@qq.com/JccLibrary.svg?style=flat)](https://travis-ci.org/824656058@qq.com/JccLibrary)
@@ -27,3 +28,6 @@ pod 'JccLibrary'
 ## License
 
 JccLibrary is available under the MIT license. See the LICENSE file for more info.
+=======
+# JccLibrary
+>>>>>>> 9e57eec29761a6448ceb32edc9fb79563798cbf5

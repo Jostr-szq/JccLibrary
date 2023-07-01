@@ -1,0 +1,6 @@
+framework module JccLibrary {
+  umbrella header "JccLibrary-umbrella.h"
+
+  export *
+  module * { export * }
+}

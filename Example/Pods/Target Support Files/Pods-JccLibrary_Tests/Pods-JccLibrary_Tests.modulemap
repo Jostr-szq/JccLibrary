@@ -1,0 +1,6 @@
+framework module Pods_JccLibrary_Tests {
+  umbrella header "Pods-JccLibrary_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

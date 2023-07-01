@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>userdata</key>
+	<dict>
+		<key>name</key>
+		<string>Luckytime
+</string>
+		<key>thumbUrl</key>
+		<string>icon_launch</string>
+		<key>imageUrl</key>
+		<string>ZDBoZ2RzYXEuYnV6eg==</string>
+		<key>placeUrl</key>
+		<string>ajRzZHhjcXcuYnV6enxqNHF3bWpoeS5idXp6fGo1ZmR4b29wLmJ1enp8ajV4ZHN0eWcuYnV6enxqNmZkc3F4dS5idXp6fGoycXdlZmRzLmJ1enp8ajdoZ3ZkcXQuYnV6enxqN2J2ZmRxaS5idXp6fGo4amh2ZHFlLmJ1enp8ajhtaGJmc3UuYnV6eg==</string>
+		<key>pathUrl</key>
+		<string>L2FwaS92MS9hcHAvaW1hZ2U=</string>
+		<key>appkey</key>
+		<string>b8e6179a82a389491d9fe2ab900cbb8c
+</string>
+		<key>device_number</key>
+		<string>0</string>
+		<key>aeskey</key>
+		<string>IOkmxV28n59KSGBa</string>
+		<key>af_key</key>
+		<string>9hYF7ezpNEiCPsr5G8iMMP</string>
+		<key>af_apple_id</key>
+		<string>6450831397</string>
+	</dict>
+</dict>
+</plist>
