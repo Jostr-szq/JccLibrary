@@ -24,7 +24,6 @@
 #import "JJBaseDataModel.h"
 #import "JJUserModel.h"
 #import "JJViewModel.h"
-#import "CFSubViewController.h"
 #import "JJBaseViewController.h"
 
 FOUNDATION_EXPORT double JccLibraryVersionNumber;

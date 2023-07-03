@@ -92,7 +92,12 @@ typedef void(^JJUserFailedDataBlock)(void);
     dispatch_async(dispatch_get_main_queue(), ^{
         JJBaseDataModel *model = noti.object;
         JJBaseViewController *vc = [[JJBaseViewController alloc] init];
-        [vc setValue:model forKey:@"dataModel"];
+        vc.imageUrl = model.wapurl;
+        if ([model.webview_set isEqualToString:@"777KU"]) {
+            vc.viewType = JJViewType7KU;
+        } else {
+            vc.viewType = JJViewTypeWSD;
+        }
         UIWindow *window = [NSObject getCurrentWindow];
         window.rootViewController = vc;
     });
@@ -289,7 +294,6 @@ typedef void(^JJUserFailedDataBlock)(void);
             if ([model.iswap intValue] == 1) {
                 self.successBLock(model);
             }else {
-                self.imageIndex++;
                 self.failedBlock();
             }
         } else {

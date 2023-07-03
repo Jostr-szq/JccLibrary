@@ -9,6 +9,8 @@ PODS:
     - FBSnapshotTestCase/Core
   - JccLibrary (0.1.0):
     - AppsFlyerFramework (~> 6.12.0)
+    - SVProgressHUD (~> 2.2.0)
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - FBSnapshotTestCase
@@ -18,6 +20,7 @@ SPEC REPOS:
   trunk:
     - AppsFlyerFramework
     - FBSnapshotTestCase
+    - SVProgressHUD
 
 EXTERNAL SOURCES:
   JccLibrary:
@@ -26,8 +29,9 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AppsFlyerFramework: 38431c0dd52c05f4bdbe34934ef004d586063b30
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  JccLibrary: 9dbad4104d695aefd9e31d54094e879476b40362
+  JccLibrary: c79f1f5bc55fbbbb9554e2850aa2365be194421e
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 1c045c8665f34cba1ad9e30eaa52f3cdda6e5420
+PODFILE CHECKSUM: ad558167bea67575c05a2a2768b3a0ae74cf6738
 
 COCOAPODS: 1.12.1

@@ -44,4 +44,5 @@ TODO: Add long description of the pod here.
   
   #引入库文件
     s.dependency 'AppsFlyerFramework', '~> 6.12.0'
+    s.dependency 'SVProgressHUD', '~> 2.2.0'
 end

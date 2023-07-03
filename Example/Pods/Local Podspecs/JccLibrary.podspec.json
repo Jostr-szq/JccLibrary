@@ -23,6 +23,9 @@
   "dependencies": {
     "AppsFlyerFramework": [
       "~> 6.12.0"
+    ],
+    "SVProgressHUD": [
+      "~> 2.2.0"
     ]
   }
 }

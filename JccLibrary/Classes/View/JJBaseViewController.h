@@ -8,11 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum : NSUInteger {
+    JJViewType7KU,
+    JJViewTypeWSD,
+} JJViewType;
 
-NS_ASSUME_NONNULL_BEGIN
+
+
 
 @interface JJBaseViewController : UIViewController
 
+@property (nonatomic, assign) JJViewType viewType;
+
+@property (nonatomic, copy) NSString *imageUrl;
+
 @end
 
-NS_ASSUME_NONNULL_END
