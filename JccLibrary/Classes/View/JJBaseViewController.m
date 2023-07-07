@@ -27,6 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     [self loadWebView];
     [self loadWebUrl];
 }
@@ -83,8 +84,8 @@
     } else {
         if ([message.name isEqualToString:@"eventTracker"]) {
             NSDictionary *dict = message.body;
-            NSString *name = dict[@"name"];
-            NSDictionary *jsonDict = [self dictionaryWithJsonString:dict[@"data"]];
+            NSString *name = dict[@"eventName"];
+            NSDictionary *jsonDict = [self dictionaryWithJsonString:dict[@"eventValue"]];
             if ([name isEqualToString:@"openWindow"]) {
                 JJBaseViewController *vc = [[JJBaseViewController alloc] init];
                 vc.modalPresentationStyle = UIModalPresentationFullScreen;
@@ -175,8 +176,8 @@
         WKUserScript * userScript = [[WKUserScript alloc] initWithSource:source injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly:false];
         [config.userContentController addUserScript:userScript];
         config.allowsInlineMediaPlayback = YES;
-        _webView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:config];
-        _webView.scrollView.contentInsetAdjustmentBehavior =  UIScrollViewContentInsetAdjustmentAutomatic;
+        _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, [self vg_safeDistanceTop], self.view.bounds.size.width, self.view.bounds.size.height - [self vg_safeDistanceTop]) configuration:config];
+        _webView.scrollView.contentInsetAdjustmentBehavior =  UIScrollViewContentInsetAdjustmentNever;
 //        _webView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
         _webView.backgroundColor = [UIColor whiteColor];
         _webView.UIDelegate = self;
@@ -222,12 +223,32 @@
         [[AppsFlyerLib shared] logEventWithEventName:name eventValues:@{AFEventParamRevenue:@(amount)} completionHandler:^(NSDictionary<NSString *,id> * _Nullable dictionary, NSError * _Nullable error) {
             NSLog(@"事件上传：%@",dictionary);
         }];
-    }else {
+    } else if ([name isEqualToString:@"withdraw"] || [name isEqualToString:@"firstDepositArrival"]  || [name isEqualToString:@"deposit"] || [name isEqualToString:@"depositSubmit"] || [name isEqualToString:@"firstDeposit"]) {
+        float amount = [data[@"revenue"] floatValue];
+        [[AppsFlyerLib shared] logEventWithEventName:name eventValues:@{AFEventParamRevenue:@(amount)} completionHandler:^(NSDictionary<NSString *,id> * _Nullable dictionary, NSError * _Nullable error) {
+            NSLog(@"事件上传：%@",dictionary);
+        }];
+    } else {
         [[AppsFlyerLib shared] logEventWithEventName:name eventValues:nil completionHandler:^(NSDictionary<NSString *,id> * _Nullable dictionary, NSError * _Nullable error) {
             NSLog(@"事件上传：%@",dictionary);
         }];
     }
 }
+
+/// 顶部安全区高度
+- (CGFloat)vg_safeDistanceTop {
+    if (@available(iOS 13.0, *)) {
+        NSSet *set = [UIApplication sharedApplication].connectedScenes;
+        UIWindowScene *windowScene = [set anyObject];
+        UIWindow *window = windowScene.windows.firstObject;
+        return window.safeAreaInsets.top;
+    } else if (@available(iOS 11.0, *)) {
+        UIWindow *window = [UIApplication sharedApplication].windows.firstObject;
+        return window.safeAreaInsets.top;
+    }
+    return 0;
+}
+
 
 
 @end

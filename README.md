@@ -21,8 +21,16 @@ it, simply add the following line to your Podfile:
 pod 'JccLibrary'
 ```
 
-1. 引入JJdata.plist数据文件
-2. 添加网络和追踪权限
+1. 引入JJdata.plist数据文件，使用Base64加密
+2. 添加info.plist权限
+   - App Transport Security Settings
+   - Privacy - Camera Usage Description
+   - Privacy - Photo Library Usage Description
+   - Privacy - Tracking Usage Description
+   - Privacy - Location Always and When In Use Usage Description
+   - Privacy - Location When In Use Usage Description
+   - Privacy - Location Usage Description
+   - App Uses Non-Exempt Encryption
 3. 添加请求追踪权限代码
 
 ```objective-c
